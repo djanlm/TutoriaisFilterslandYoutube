@@ -1,24 +1,16 @@
-/**
- * (c) Facebook, Inc. and its affiliates. Confidential and proprietary.
- */
-
-//==============================================================================
-// Develop by Djanilson Martins, for more hints subscribe to my channel on youtube: 
-// and follow my instagram page: www.instagram.com/filters.land
-//==============================================================================
-
-//required modules
 const Scene = require('Scene');
 const Materials = require('Materials');
 const NativeUI = require('NativeUI');
 const Textures = require('Textures');
 
 
-const texture_name = 'filtersland'; // name of your texture
-const material_name = 'batom_mat';  // your material names
+const texture_name = 'filtersland';
+const material_name = 'batom_mat';
 
-/** Fetches the assets and objects we need */
+
 Promise.all([
+
+  Textures.findFirst(texture_name+' (1)'),
   Textures.findFirst(texture_name+' (50)'),
   Textures.findFirst(texture_name+' (49)'),
   Textures.findFirst(texture_name+' (48)'),
@@ -68,7 +60,6 @@ Promise.all([
   Textures.findFirst(texture_name+' (4)'),
   Textures.findFirst(texture_name+' (3)'),
   Textures.findFirst(texture_name+' (2)'),
-  Textures.findFirst(texture_name+' (1)'),
 
   Materials.findFirst(material_name+'0'),
   Materials.findFirst(material_name+'1'),
@@ -121,63 +112,62 @@ Promise.all([
   Materials.findFirst(material_name+'48'),
   Materials.findFirst(material_name+'49'),
 
-  Scene.root.findFirst('faceMesh_batom'),
-
+  Scene.root.findFirst('lips'),
 ]).then(main);
 
 
 function main(assets) {
 
-    const texture0 = assets[0];
-    const texture1 = assets[1];
-    const texture2 = assets[2];
-    const texture3 = assets[3];
-    const texture4 = assets[4];
-    const texture5 = assets[5];
-    const texture6 = assets[6];
-    const texture7 = assets[7];
-    const texture8 = assets[8];
-    const texture9 = assets[9];
-    const texture10 = assets[10];
-    const texture11 = assets[11];
-    const texture12 = assets[12];
-    const texture13 = assets[13];
-    const texture14 = assets[14];
-    const texture15 = assets[15];
-    const texture16 = assets[16];
-    const texture17 = assets[17];
-    const texture18 = assets[18];
-    const texture19 = assets[19];
-    const texture20 = assets[20];
-    const texture21 = assets[21];
-    const texture22 = assets[22];
-    const texture23 = assets[23];
-    const texture24 = assets[24];
-    const texture25 = assets[25];
-    const texture26 = assets[26];
-    const texture27 = assets[27];
-    const texture28 = assets[28];
-    const texture29 = assets[29];
-    const texture30 = assets[30];
-    const texture31 = assets[31];
-    const texture32 = assets[32];
-    const texture33 = assets[33];
-    const texture34 = assets[34];
-    const texture35 = assets[35];
-    const texture36 = assets[36];
-    const texture37 = assets[37];
-    const texture38 = assets[38];
-    const texture39 = assets[39];
-    const texture40 = assets[40];
-    const texture41 = assets[41];
-    const texture42 = assets[42];
-    const texture43 = assets[43];
-    const texture44 = assets[44];
-    const texture45 = assets[45];
-    const texture46 = assets[46];
-    const texture47 = assets[47];
-    const texture48 = assets[48];
-    const texture49 = assets[49];
+  const texture0 = assets[0];
+  const texture1 = assets[1];
+  const texture2 = assets[2];
+  const texture3 = assets[3];
+  const texture4 = assets[4];
+  const texture5 = assets[5];
+  const texture6 = assets[6];
+  const texture7 = assets[7];
+  const texture8 = assets[8];
+  const texture9 = assets[9];
+  const texture10 = assets[10];
+  const texture11 = assets[11];
+  const texture12 = assets[12];
+  const texture13 = assets[13];
+  const texture14 = assets[14];
+  const texture15 = assets[15];
+  const texture16 = assets[16];
+  const texture17 = assets[17];
+  const texture18 = assets[18];
+  const texture19 = assets[19];
+  const texture20 = assets[20];
+  const texture21 = assets[21];
+  const texture22 = assets[22];
+  const texture23 = assets[23];
+  const texture24 = assets[24];
+  const texture25 = assets[25];
+  const texture26 = assets[26];
+  const texture27 = assets[27];
+  const texture28 = assets[28];
+  const texture29 = assets[29];
+  const texture30 = assets[30];
+  const texture31 = assets[31];
+  const texture32 = assets[32];
+  const texture33 = assets[33];
+  const texture34 = assets[34];
+  const texture35 = assets[35];
+  const texture36 = assets[36];
+  const texture37 = assets[37];
+  const texture38 = assets[38];
+  const texture39 = assets[39];
+  const texture40 = assets[40];
+  const texture41 = assets[41];
+  const texture42 = assets[42];
+  const texture43 = assets[43];
+  const texture44 = assets[44];
+  const texture45 = assets[45];
+  const texture46 = assets[46];
+  const texture47 = assets[47];
+  const texture48 = assets[48];
+  const texture49 = assets[49];
 
     const material0 = assets[50];
     const material1 = assets[51];
@@ -232,17 +222,15 @@ function main(assets) {
 
     const faceMesh = assets[100];
 
+  const picker = NativeUI.picker;
 
-    const picker = NativeUI.picker;
+  const index = 0;
 
-    const index = 0;
-    const selection = 0;  
+  const configuration = {
 
-    const configuration = {
+    selectedIndex: index,
 
-      selectedIndex: index,
-
-      items: [
+    items: [
         {image_texture: texture0},
         {image_texture: texture1},
         {image_texture: texture2},
@@ -293,8 +281,7 @@ function main(assets) {
         {image_texture: texture47},
         {image_texture: texture48},
         {image_texture: texture49},
-        
-      ],
+    ],
 
     mats: [
       {material: material0},
@@ -348,16 +335,14 @@ function main(assets) {
       {material: material48},
       {material: material49},
     ]
+  }
 
+  picker.configure(configuration);
 
-    };
+  picker.visible = true;
 
-    picker.configure(configuration);
-    picker.visible = true; 
+  picker.selectedIndex.monitor().subscribe(function (index) {
+    faceMesh.material = configuration.mats[index.newValue].material;
+  })
 
-    picker.selectedIndex.monitor().subscribe(function(index) {
-      faceMesh.material = configuration.mats[index.newValue].material; // add selected material to faceMesh
-      //Patches.inputs.setScalar('selection', index.newValue);
-    });
-   
 }
