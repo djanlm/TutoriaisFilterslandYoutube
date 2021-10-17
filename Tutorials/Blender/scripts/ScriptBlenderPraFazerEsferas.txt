@@ -1,0 +1,10 @@
+import bpy
+
+object_number = 12
+sphere_radius = 0.02
+
+
+for x in range(0, object_number):
+    bpy.ops.mesh.primitive_uv_sphere_add(segments=12, ring_count=8, radius=sphere_radius, enter_editmode=False, align='WORLD', location=(0, 0, 0), scale=(1, 1, 1))
+    bpy.ops.object.shade_smooth()
+    sphere_radius += 0.001
