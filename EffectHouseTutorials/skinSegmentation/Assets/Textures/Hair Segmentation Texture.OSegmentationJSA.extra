@@ -1,0 +1,16 @@
+[
+  {
+    "guid": {
+      "a": "f6221302-3794-f91c-7312-a683dd65633a",
+      "b": ""
+    },
+    "extraType": "JSAssetSegmentation",
+    "name": "Hair Segmentation Texture",
+    "expandInPanel": false,
+    "objGuid": "",
+    "rttiType": "ScreenRenderTexture",
+    "version": "0.1.0",
+    "isVisibleInInspector": true,
+    "hideInPanel": false
+  }
+]

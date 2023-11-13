@@ -1,0 +1,62 @@
+{
+  "id": "363772911600f861794b3983fa1a06c499c8ec",
+  "revision": "363773911600f861794b3983fa1a06c499c8ec",
+  "version": {
+    "dev": 0,
+    "patch": 0,
+    "prod": 173
+  },
+  "creatorIdentifier": "com.facebook.arstudio.skylight",
+  "creatorPlatform": "windows",
+  "creatorFileVersion": {
+    "dev": 0,
+    "patch": 0,
+    "prod": 173
+  },
+  "visual_programming": {
+    "connections": [
+      {
+        "modelName": "patch_connection_model",
+        "identifier": "patch_connection_model:374603-911600f8-6179-4b39-83fa-1a06c499c8ec",
+        "fromPatch": "script_read_variable_patch_model:374171-911600f8-6179-4b39-83fa-1a06c499c8ec",
+        "fromPort": "script_patch_read_variable_model:374169-911600f8-6179-4b39-83fa-1a06c499c8ec",
+        "toPatch": "template_patch_model:374601-911600f8-6179-4b39-83fa-1a06c499c8ec",
+        "toPort": "1"
+      }
+    ],
+    "graphs": [
+      {
+        "modelName": "patch_graph",
+        "identifier": "patch_graph:363864-911600f8-6179-4b39-83fa-1a06c499c8ec",
+        "subpatches": [
+          "script_read_variable_patch_model:374171-911600f8-6179-4b39-83fa-1a06c499c8ec",
+          "template_patch_model:374601-911600f8-6179-4b39-83fa-1a06c499c8ec"
+        ]
+      }
+    ],
+    "patches": [
+      {
+        "modelName": "script_read_variable_patch_model",
+        "name": "Variables From Script",
+        "identifier": "script_read_variable_patch_model:374171-911600f8-6179-4b39-83fa-1a06c499c8ec",
+        "object": "script_bridging_variables_model:363810-911600f8-6179-4b39-83fa-1a06c499c8ec",
+        "position": [
+          524,
+          -124
+        ],
+        "variables": "script_bridging_variables_model:363810-911600f8-6179-4b39-83fa-1a06c499c8ec"
+      },
+      {
+        "modelName": "template_patch_model",
+        "name": "Value",
+        "identifier": "template_patch_model:374601-911600f8-6179-4b39-83fa-1a06c499c8ec",
+        "position": [
+          740,
+          -124
+        ],
+        "templateId": "builtin.value",
+        "variantInfo": "float"
+      }
+    ]
+  }
+}

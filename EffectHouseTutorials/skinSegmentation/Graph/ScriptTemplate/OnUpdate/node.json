@@ -1,0 +1,47 @@
+{
+	"name": "Update",
+	"id": "76dd06cb-6f7a-60eb-e2fa-c9b10a0c78fc",
+	"copyEnable": true,
+	"groupEnable": true,
+	"inputs": [],
+	"outputs": [
+		{
+			"name": "Next",
+			"type": "Pulse",
+			"item_type": "",
+			"description": "Execute the next node",
+			"displayType": "Exec",
+			"nameKey": "graph_update_output_next",
+			"descriptionKey": "graph_update_output_next_description",
+			"displayTypeKey": "graph_type_exec"
+		},
+		{
+			"name": "Delta Time",
+			"type": "Double",
+			"item_type": "",
+			"description": "The number of seconds elapsed since last frame",
+			"displayType": "Number",
+			"nameKey": "graph_update_output_deltatime",
+			"descriptionKey": "graph_update_output_deltatime_description",
+			"displayTypeKey": "graph_type_number"
+		}
+	],
+	"js": "CGOnUpdate.js",
+	"lua": "CGOnUpdate.lua",
+	"version": "1.0.1",
+	"amazingVersion": "10.40.0",
+	"luaFuncName": "CGOnUpdate",
+	"category": "Event",
+	"subCategory": "Lifecycle",
+	"description": "Execute the next node in every frame.",
+	"nodeEvent": "onUpdate",
+	"productTypes": [
+		"EHO",
+		"EHD",
+		"EHI"
+	],
+	"onlineWebsite": "graph_update_website",
+	"nameKey": "graph_update_name",
+	"categoryKey": "graph_category_event",
+	"descriptionKey": "graph_update_description"
+}
